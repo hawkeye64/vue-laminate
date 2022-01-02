@@ -2,7 +2,7 @@
   "name": "vue-laminate",
   "version": "0.0.1",
   "author": "Jeff Galbraith <galbrait64@gmail.com>",
-  "description": "Create skinnable (laminate) web sites",
+  "description": "Laminate your Vue projects with the ability to change colors",
   "license": "MIT",
   "module": "dist/index.esm.js",
   "main": "dist/index.common.js",
