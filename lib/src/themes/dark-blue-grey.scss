@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+[laminate-scheme="dark-blue-grey"] {
+  color-scheme: dark;
+
+  --brand1: #{$orange-4};
+  --brand2: #{$blue-grey-4};
+  --text1: #{$blue-grey-1};
+  --text2: #{$blue-grey-3};
+  --surface1: #{$blue-grey-9};
+  --surface2: #{$blue-grey-8};
+  --surface3: #{$blue-grey-7};
+  --surface4: #{$blue-grey-6};
+  --surface-shadow: 288 30% 20%;
+  --shadow-strength: .7;
+}

@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+[laminate-scheme="dark-lime"] {
+  color-scheme: dark;
+
+  --brand1: #{$lime-6};
+  --brand2: #{$lime-4};
+  --text1: #{$lime-1};
+  --text2: #{$lime-3};
+  --surface1: #{$lime-9};
+  --surface2: #{$lime-8};
+  --surface3: #{$lime-7};
+  --surface4: #{$lime-6};
+  --surface-shadow: 74 63% 19%;
+  --shadow-strength: .7;
+}

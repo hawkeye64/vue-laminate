@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+[laminate-scheme="indigo"] {
+  color-scheme: light;
+
+  --brand1: #{$indigo-6};
+  --brand2: #{$indigo-4};
+  --text1: #{$indigo-10};
+  --text2: #{$indigo-8};
+  --surface1: #{$indigo-1};
+  --surface2: #{$indigo-2};
+  --surface3: #{$indigo-3};
+  --surface4: #{$indigo-4};
+  --surface-shadow: 288 30% 20%;
+  --shadow-strength: .02;
+}

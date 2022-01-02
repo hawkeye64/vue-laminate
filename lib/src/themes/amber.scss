@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+[laminate-scheme="amber"] {
+  color-scheme: light;
+
+  --brand1: #{$amber-6};
+  --brand2: #{$amber-4};
+  --text1: #{$amber-10};
+  --text2: #{$amber-8};
+  --surface1: #{$amber-1};
+  --surface2: #{$amber-2};
+  --surface3: #{$amber-3};
+  --surface4: #{$amber-4};
+  --surface-shadow: 288 30% 20%;
+  --shadow-strength: .02
+}

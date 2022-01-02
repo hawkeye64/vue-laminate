@@ -1,0 +1,15 @@
+{
+  "name": "vue-laminate-workspace",
+  "version": "1.0.0",
+  "description": "Vue Laminate mono-repo",
+  "workspaces": [
+    "lib",
+    "docs"
+  ],
+  "author": "Jeff Galbraith <galbraith64@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build:all": "yarn && cd ./lib && yarn build && cd ../docs && quasar build"
+  }
+}

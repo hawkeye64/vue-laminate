@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+[laminate-scheme="admin1"] {
+  color-scheme: light;
+
+  --brand1: #{$orange-4};
+  --brand2: #{$orange-8};
+  --text1: #{$light-blue-8};
+  --text2: #{$light-blue-10};
+  --surface1: linear-gradient(90deg, hsla(0, 11%, 11%, 1) 0%, hsla(186, 72%, 17%, 1) 100%);
+  --surface2: transparent;
+  --surface3: #{$light-blue-3};
+  --surface4: #{$light-blue-4};
+  --surface-shadow: 288 30% 20%;
+  --shadow-strength: .02
+}

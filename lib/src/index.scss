@@ -1,0 +1,132 @@
+@import "./variables.scss";
+
+
+[laminate-scheme="light"] {
+  color-scheme: light;
+
+  --brand1: #{$orange-6};
+  --brand2: #{$grey-6};
+  --text1: #{$grey-10};
+  --text2: #{$grey-8};
+  --surface1: #{$grey-1};
+  --surface2: #{$grey-2};
+  --surface3: #{$grey-3};
+  --surface4: #{$grey-4};
+  --surface-shadow: 200 10% 20%;
+  --shadow-strength: .02;
+}
+
+[laminate-scheme="dark"] {
+  color-scheme: dark;
+  
+  --brand1: #{$orange-4};
+  --brand2: #{$grey-4};
+  --text1: #{$grey-1};
+  --text2: #{$grey-3};
+  --surface1: #{$grey-9};
+  --surface2: #{$grey-8};
+  --surface3: #{$grey-7};
+  --surface4: #{$grey-6};
+  --surface-shadow: 200 50% 3%;
+  --shadow-strength: .8;
+}
+
+.vue-laminate {
+  html {
+    background: var(--surface1) !important;
+    color: var(--text1) !important;
+    accent-color: var(--brand1);
+    transition: color 0.5s ease, background 0.5s ease;
+  }
+
+  header, footer, aside {
+    background: var(--surface2) !important;
+    color: var(--text1) !important;
+    transition: color 0.5s ease, background 0.5s ease;
+  } 
+
+  .bg-primary {
+    background: var(--brand1) !important;
+  }
+
+  .text-primary {
+    background: var(--brand1) !important;
+  }
+
+  .text-brand1 {
+    color: var(--brand1) !important;
+  }
+
+  .bg-brand1 {
+    background: var(--brand1) !important;
+  }
+
+  .text-brand2 {
+    color: var(--brand2) !important;
+  }
+
+  .bg-brand2 {
+    background: var(--brand2) !important;
+  }
+
+  .text-surface1 {
+    color: var(--surface1) !important;
+  }
+
+  .bg-surface1 {
+    background: var(--surface1) !important;
+  }
+
+  .text-surface2 {
+    color: var(--surface2) !important;
+  }
+
+  .bg-surface2 {
+    background: var(--surface2) !important;
+  }
+
+  .text-surface3 {
+    color: var(--surface3) !important;
+  }
+
+  .bg-surface3 {
+    background: var(--surface3) !important;
+  }
+
+  .text-surface4 {
+    color: var(--surface4) !important;
+  }
+
+  .bg-surface4 {
+    background: var(--surface4) !important;
+  }
+
+  .text-text1 {
+    color: var(--text1) !important;
+  }
+
+  .bg-text1 {
+    background: var(--text1) !important;
+  }
+
+  .text-text2 {
+    color: var(--text2) !important;
+  }
+
+  .bg-text2 {
+    background: var(--text2) !important;
+  }
+
+  .laminate-shadow {
+    border: 1px solid hsl(var(--brand1) 10% 50% / 15%);
+    box-shadow: 0 1rem .5rem -.5rem;
+    box-shadow:
+      0 2.8px 2.2px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + .03)),
+      0 6.7px 5.3px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + .01)),
+      0 12.5px 10px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + .02)),
+      0 22.3px 17.9px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + .02)),
+      0 41.8px 33.4px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + .03)),
+      0 100px 80px hsl(var(--surface-shadow) / var(--shadow-strength))
+    ;
+  }
+}

@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+[laminate-scheme="dark-deep-orange"] {
+  color-scheme: dark;
+
+  --brand1: #{$deep-orange-6};
+  --brand2: #{$deep-orange-4};
+  --text1: #{$deep-orange-1};
+  --text2: #{$deep-orange-3};
+  --surface1: #{$deep-orange-9};
+  --surface2: #{$deep-orange-8};
+  --surface3: #{$deep-orange-7};
+  --surface4: #{$deep-orange-6};
+  --surface-shadow: 30 100% 27%;
+  --shadow-strength: .7;
+}

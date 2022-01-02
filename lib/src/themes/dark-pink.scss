@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+[laminate-scheme="dark-pink"] {
+  color-scheme: dark;
+
+  --brand1: #{$pink-6};
+  --brand2: #{$pink-4};
+  --text1: #{$pink-1};
+  --text2: #{$pink-3};
+  --surface1: #{$pink-9};
+  --surface2: #{$pink-8};
+  --surface3: #{$pink-7};
+  --surface4: #{$pink-6};
+  --surface-shadow: 322 66% 33%;
+  --shadow-strength: .7;
+}

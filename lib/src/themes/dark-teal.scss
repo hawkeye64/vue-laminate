@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+[laminate-scheme="dark-teal"] {
+  color-scheme: dark;
+
+  --brand1: #{$teal-6};
+  --brand2: #{$teal-4};
+  --text1: #{$teal-1};
+  --text2: #{$teal-3};
+  --surface1: #{$teal-9};
+  --surface2: #{$teal-8};
+  --surface3: #{$teal-7};
+  --surface4: #{$teal-6};
+  --surface-shadow: 288 30% 20%;
+  --shadow-strength: .7;
+}

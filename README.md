@@ -1,2 +1,2 @@
-# quasar-facade
-Give your Quasar projects the ability to change colors
+# vue-laminate
+Give your Vue projects the ability to change colors

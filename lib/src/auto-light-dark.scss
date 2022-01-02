@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+:root {
+  color-scheme: light;
+
+  /* set defaults */
+  --brand1: #{$orange-6};
+  --brand2: #{$grey-6};
+  --text1: #{$grey-10};
+  --text2: #{$grey-8};
+  --surface1: #{$grey-1};
+  --surface2: #{$grey-2};
+  --surface3: #{$grey-3};
+  --surface4: #{$grey-4};
+  --surface-shadow: 200 10% 20%;
+  --shadow-strength: .02;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --brand1: #{$orange-4};
+    --brand2: #{$grey-4};
+    --text1: #{$grey-1};
+    --text2: #{$grey-3};
+    --surface1: #{$grey-9};
+    --surface2: #{$grey-7};
+    --surface3: #{$grey-6};
+    --surface4: #{$grey-5};
+    --surface-shadow: 200 50% 3%;
+    --shadow-strength: .8;
+  }
+}
+

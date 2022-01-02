@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+[laminate-scheme="dark-yellow"] {
+  color-scheme: dark;
+
+  --brand1: #{$yellow-6};
+  --brand2: #{$yellow-4};
+  --text1: #{$yellow-1};
+  --text2: #{$yellow-3};
+  --surface1: #{$yellow-9};
+  --surface2: #{$yellow-8};
+  --surface3: #{$yellow-7};
+  --surface4: #{$yellow-6};
+  --surface-shadow: 40 60% 36%;
+  --shadow-strength: .7;
+}

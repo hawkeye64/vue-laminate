@@ -1,0 +1,80 @@
+// -----------------------------------------------
+// Specific Quasar css that needs override
+// -----------------------------------------------
+
+.vue-laminate {
+  --q-primary: var(--brand1);
+  --q-secondary: var(--brand2);
+
+  .q-layout {
+    background: var(--surface1);
+    color: var(--text1);
+  }
+
+  .q-page {
+    background: transparent;
+    color: var(--text1);
+  }
+
+  .q-menu {
+    background: var(--surface1);
+    color: var(--text1);
+  }
+
+  .q-expansion-item {
+    color: var(--text1);
+  }
+
+  .q-item__label {
+    color: var(--text1);
+  }
+
+  .q-item__label--caption {
+    color: rgba(var(--text2), 0.54);
+  }
+
+  .q-item__label--header {
+    color: var(--text2);
+  }
+
+  .q-item__section {
+    color: var(--text2);
+
+    .q-icon {
+      color: var(--brand1);
+    }
+  }
+
+  .q-item__section--side, .menu .q-item .q-item__section--side {
+    background: transparent;
+    color: var(--text2);
+  }
+
+  .q-field--standard .q-field__control:before {
+    border-bottom: 1px solid rgba(var(--text1), 0.86);
+  }
+
+  .q-field__marginal {
+    color: rgba(var(--text1) 0.54);
+  }
+
+  .q-field__native,
+  .q-field__prefix,
+  .q-field__suffix,
+  .q-field__input {
+    color: rgba(var(--text1), 0.87);
+  }
+
+  .q-field__label {
+    color: var(--text1);
+  }
+
+  .q-btn {
+    color: var(--text1);
+  }
+
+  .q-item.q-router-link--active, .q-item--active {
+    background: var(--surface2);
+    color: var(--text2);
+  }
+}
