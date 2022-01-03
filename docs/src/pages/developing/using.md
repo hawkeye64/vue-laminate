@@ -125,3 +125,23 @@ The current themes are: `amber`, `amber-dark`, `blue-green`, `blue-green-dark`, 
 There is one additional theme called `dim-dark` available.
 
 Don't forget, you can make your own. This will be explained in the next section.
+
+## Examples
+
+### Themes
+
+<example-viewer
+title=""
+file="Themes"
+codepen-title="vue-laminate"
+class="bg-surface2"
+/>
+
+### Layout
+
+<example-viewer
+title=""
+file="Layout"
+codepen-title="vue-laminate"
+class="bg-surface2"
+/>
