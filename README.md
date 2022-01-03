@@ -1,2 +1,2 @@
 # vue-laminate
-Give your Vue projects the ability to change colors
+Laminate your Vue projects with the ability to change colors
