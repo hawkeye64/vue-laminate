@@ -7,8 +7,8 @@
   --q-secondary: var(--brand2);
 
   .q-layout {
-    background: var(--surface1);
-    color: var(--text1);
+    background: var(--surface1) !important;
+    color: var(--text1) !important;
   }
 
   .q-page {

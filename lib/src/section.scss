@@ -1,0 +1,7 @@
+.vue-laminate {
+  section {
+    background: var(--surface1) !important;
+    color: var(--text1) !important;
+    transition: color 0.5s ease, background 0.5s ease;
+  } 
+}

@@ -26,7 +26,7 @@
       <q-checkbox v-model="applyAll" label="Apply to Whole Page" />
     </div>
 
-    <q-layout ref="componentRef" view="hHh Lpr lff" container style="height: 300px" class="shadow-2 rounded-borders">
+    <q-layout ref="componentRef" view="hHh Lpr lff" container style="height: 300px" class="shadow-2 rounded-borders bg-surface1">
       <q-header elevated class="bg-black">
         <q-toolbar>
           <q-btn flat @click="drawer = !drawer" round dense icon="menu" />

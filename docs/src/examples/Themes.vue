@@ -26,7 +26,7 @@
       <q-checkbox v-model="applyAll" label="Apply to Whole Page" />
     </div>
 
-    <div ref="componentRef" class="full-width">
+    <div ref="componentRef" class="full-width bg-surface1">
       <main class="full-width row justify-evenly items-start q-gutter-sm full-width col-11" :class="{ 'bg-surface1': applyAll !== true }">
         <section class="q-mb-lg">
           <div class="row justify-center text-samples">
@@ -91,7 +91,6 @@ import 'vue-laminate/src/quasar-shim.scss'
 import 'vue-laminate/src/themes/all-themes.scss'
 import 'vue-laminate/src/aside.scss'
 import 'vue-laminate/src/header-footer.scss'
-// import 'vue-laminate/src/section.scss'
 
 const themes = [
   'default',
