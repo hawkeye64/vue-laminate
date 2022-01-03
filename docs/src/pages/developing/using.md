@@ -29,6 +29,11 @@ The returned items are:
 1. `setTheme` (function): used to change the theme color. Example: `setTheme('red')`
 2. `currentTheme` (computed): contains the current them. This is a computed value. You must use it as `currentTheme.value`.
 3. `setElement` (function): for setting a specific element to bind with. Usually called in `onBeforeMount` or `onMounted` life-cycle hooks. If you want to bind to the complete page, the use `document.firstElementChild`, otherwise use a `ref` value for the specific component to bind. Call `setElement(null)` to turn off theming.
+4. `currentElement` (function): returns the current element. Can be `null`.
+5. `themeCache` (object): contains 3 methods:
+  1. `has(key)` (boolean): returns true is passed key is in localStorage, otherwise false
+  2. `get(key)` (string): returns the value associated with the key fro localStorage.
+  3. `set(key, value): sets the localStorage key with the associated value.
 
 ## Initial Themes and CSS classes
 
