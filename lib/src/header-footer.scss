@@ -1,0 +1,7 @@
+.vue-laminate {
+  header, footer {
+    background: var(--surface3) !important;
+    color: var(--text1) !important;
+    transition: color 0.5s ease, background 0.5s ease;
+  } 
+}

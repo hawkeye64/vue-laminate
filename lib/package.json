@@ -1,6 +1,6 @@
 {
   "name": "vue-laminate",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.1",
   "author": "Jeff Galbraith <galbrait64@gmail.com>",
   "description": "Vue-Laminate: Give your Vue apps themes",
   "license": "MIT",

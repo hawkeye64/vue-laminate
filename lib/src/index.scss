@@ -39,12 +39,6 @@
     transition: color 0.5s ease, background 0.5s ease;
   }
 
-  header, footer, aside {
-    background: var(--surface2) !important;
-    color: var(--text1) !important;
-    transition: color 0.5s ease, background 0.5s ease;
-  } 
-
   .bg-primary {
     background: var(--brand1) !important;
   }

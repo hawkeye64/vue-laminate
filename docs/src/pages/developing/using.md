@@ -37,7 +37,7 @@ The returned items are:
 
 ## Initial Themes and CSS classes
 
-Vue Laminate has several different CSS modules you can use. The default one (`'vue-laminate/dist/index.css'`) supports `default`, `light`, and `dark` modes. The `default` mode let's the website (if programmed that way) to use it's own `light` and `dark` modes. Basically a hands-off, don't do anything approach. This css module also has special handling for `html`, `header`, `footer` and `aside`.
+Vue Laminate has several different CSS modules you can use. The default one (`'vue-laminate/dist/index.css'`) supports `default`, `light`, and `dark` modes. The `default` mode let's the website (if programmed that way) to use it's own `light` and `dark` modes. Basically a hands-off, don't do anything approach. This css module also has special handling for `html`, setting the background to the first `surface` color.
 
 It also supplies various css classes that can be used directly. There are two **BRAND** colors, four **SURFACE** colors, two **TEXT** colors and one **SHADOW** color. These are:
 
@@ -55,6 +55,19 @@ It also supplies various css classes that can be used directly. There are two **
 If you are using the Quasar Framework, then when a component has a `color` or `bg-color` attribute, you do not need to pass in the prefix (ie: `brand1` is sufficient).
 :::
 
+Additionally, there are individual classes that may help you for `aside`, `header` and `footer` elements.
+
+You can import these as:
+
+```js
+import 'vue-laminate/dist/aside.scss'
+import 'vue-laminate/dist/header-footer.scss'
+```
+
+::: tip
+The reason some CSS definitions are in their own file is so that if you don't care for what we have done, you can certainly make your own. We don't try to tie you down to our own designs. `vue-laminate` was made to be extensible as much as possible.
+:::
+
 All color themes that comes with Vue Laminate is available individually, in the `themes` folder. To use the `blue` theme, you can:
 
 ```js
@@ -66,15 +79,21 @@ import useLaminate from 'vue-laminate'
 
 // finally somewhere in your setup() function
 const { setTheme, currentTheme, setElement } = useLaminate()
-setElement(document.firstElementChild)
+setElement(document.body) // or document.firstElementChild, if you like
 setTheme('red')
 ```
 
-If you call `setTheme` with a theme file that is not loaded, then it will not work.
+If you call `setTheme` with a theme file that is not been imported, then it will not work.
 
 ## Auto Dark Mode
 
-If you want Vue Laminate to deal with your **dark** and **light** modes automatically, based on the user's `prefers-color-scheme: dark`, then import in the `vue-laminate/dist/auto-light-dark.css` file. Simple as that!
+If you want Vue Laminate to deal with your **dark** and **light** modes automatically, based on the user's `prefers-color-scheme: dark`, then:
+
+```js
+import 'vue-laminate/dist/auto-light-dark.css'
+```
+
+Simple as that!
 
 ## Quasar Framework
 
@@ -93,6 +112,7 @@ For other libraries, you will have to create your own CSS overrides. PRs are wel
 There are also some convenience css components that allow you to import all, import light, or import dark themes all at once.
 
 ```js
+// choose only 1 to avoid duplicate css
 import 'vue-laminate/dist/themes/all-themes.css'
 import 'vue-laminate/dist/themes/all-dark.css'
 import 'vue-laminate/dist/themes/all-light.css'
@@ -102,6 +122,6 @@ import 'vue-laminate/dist/themes/all-light.css'
 
 The current themes are: `amber`, `amber-dark`, `blue-green`, `blue-green-dark`, `blue-grey`, `blue-grey-dark`, `blue`, `blue-dark`, `brown`, `brown-dark`, `cyan`, `cyan-dark`, `green`, `green-dark`, `grey`, `grey-dark`, `indigo`, `indigo-dark`, `light-blue`, `light-blue-dark`, `light-green`, `light-green-dark`, `lime`, `lime-dark`, `orange`, `orange-dark`, `pink`, `pink-dark`, `purple`, `purple-dark`, `red`, `red-dark`, `teal`, `teal-dark`, `yellow`, and `yellow-dark`.
 
-There is one additional theme called `dim` available.
+There is one additional theme called `dim-dark` available.
 
 Don't forget, you can make your own. This will be explained in the next section.
