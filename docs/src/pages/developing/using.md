@@ -6,9 +6,7 @@ keys: developing
 
 ## Usage
 
-Vue Laminate has a single JavaScript function that will do all of your work.
-
-Just import it into your code where you need it.
+Vue Laminate has a single JavaScript function. Just import it into your code where you need it.
 
 ```js
 import useLaminate from 'vue-laminate'
@@ -30,7 +28,7 @@ The returned items are:
 
 1. `setTheme` (function): used to change the theme color. Example: `setTheme('red')`
 2. `currentTheme` (computed): contains the current them. This is a computed value. You must use it as `currentTheme.value`.
-3. `setElement` (function): for setting a specific element to bind with. Usually called in `onBeforeMount` or `onMounted` life-cycle hooks. If you want to bind to the complete page, the use `document.firstElementChild`, otherwise use a `ref` value for the specific component to bind.
+3. `setElement` (function): for setting a specific element to bind with. Usually called in `onBeforeMount` or `onMounted` life-cycle hooks. If you want to bind to the complete page, the use `document.firstElementChild`, otherwise use a `ref` value for the specific component to bind. Call `setElement(null)` to turn off theming.
 
 ## Initial Themes and CSS classes
 
@@ -97,7 +95,7 @@ import 'vue-laminate/dist/themes/all-light.css'
 
 ## Themes
 
-The current themes are: `amber`, `dark-amber`, `blue-green`, `dark-blue-green`, `blue-grey`, `dark-blue-grey`, `blue`, `dark-blue`, `brown`, `dark-brown`, `cyan`, `dark-cyan`, `green`, `dark-green`, `grey`, `dark-grey`, `indigo`, `dark-indigo`, `light-blue`, `dark-light-blue`, `light-green`, `dark-light-green`, `lime`, `dark-like`, `orange`, `dark-orange`, `pink`, `dark-pink`, `purple`, `dark-purple`, `red`, `dark-red`, `teal`, `dark-teal`, `yellow`, and `dark-yellow`.
+The current themes are: `amber`, `amber-dark`, `blue-green`, `blue-green-dark`, `blue-grey`, `blue-grey-dark`, `blue`, `blue-dark`, `brown`, `brown-dark`, `cyan`, `cyan-dark`, `green`, `green-dark`, `grey`, `grey-dark`, `indigo`, `indigo-dark`, `light-blue`, `light-blue-dark`, `light-green`, `light-green-dark`, `lime`, `lime-dark`, `orange`, `orange-dark`, `pink`, `pink-dark`, `purple`, `purple-dark`, `red`, `red-dark`, `teal`, `teal-dark`, `yellow`, and `yellow-dark`.
 
 There is one additional theme called `dim` available.
 

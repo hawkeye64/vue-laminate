@@ -1,10 +1,10 @@
 @import "../variables.scss";
 
-[laminate-scheme="dark-indigo"] {
+[laminate-scheme="indigo-dark"] {
   color-scheme: dark;
 
-  --brand1: #{$indigo-6};
-  --brand2: #{$indigo-4};
+  --brand1: #{$orange-6};
+  --brand2: #{$orange-4};
   --text1: #{$indigo-1};
   --text2: #{$indigo-3};
   --surface1: #{$indigo-9};

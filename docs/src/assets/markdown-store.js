@@ -8,7 +8,7 @@ export function useMarkdownStore () {
 export function provideMarkdownStore () {
   const store = {
     toc: [],
-    title: 'Skins for your Vue apps'
+    title: 'Vue-Laminate: Give your Vue apps themes'
   }
 
   provide(

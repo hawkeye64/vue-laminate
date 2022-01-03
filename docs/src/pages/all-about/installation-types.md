@@ -8,4 +8,22 @@ related:
   - /contributing/sponsor
 ---
 
-TBD
+## Install
+
+To add vue-laminate to your Vue project:
+
+```
+yarn add vue-laminate
+# or
+npm install vue-laminate
+```
+
+## Uninstall
+
+To remove vue-laminate from your Vue project:
+
+```
+yarn remove vue-laminate
+# or
+npm uninstall vue-laminate
+```

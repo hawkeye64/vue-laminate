@@ -83,7 +83,9 @@
 </template>
 
 <script>
-import { defineComponent, onMounted, onUnmounted, ref, watch } from 'vue'
+import { defineComponent, onMounted, onUnmounted, ref, watch, nextTick } from 'vue'
+import { useQuasar } from 'quasar'
+import { useMarkdownStore } from 'assets/markdown-store.js'
 import useLaminate from 'vue-laminate/src/index.js'
 import 'vue-laminate/src/index.scss'
 import 'vue-laminate/src/quasar-shim.scss'
@@ -97,56 +99,74 @@ export default defineComponent({
       'default',
       'light',
       'dark',
-      'dim',
+      'dark-alt',
+      'dim-dark',
       'amber',
-      'dark-amber',
-      'brown',
-      'dark-brown',
+      'amber-dark',
       'blue',
-      'dark-blue',
+      'blue-dark',
       'blue-grey',
-      'dark-blue-grey',
+      'blue-grey-dark',
+      'brown',
+      'brown-dark',
       'cyan',
-      'dark-cyan',
+      'cyan-dark',
       'indigo',
-      'dark-indigo',
+      'indigo-dark',
       'light-green',
-      'dark-light-green',
+      'light-green-dark',
       'green',
-      'dark-green',
+      'green-dark',
       'lime',
-      'dark-lime',
+      'lime-dark',
       'grey',
-      'dark-grey',
+      'grey-dark',
       'orange',
-      'dark-orange',
+      'orange-dark',
       'deep-orange',
-      'dark-deep-orange',
+      'deep-orange-dark',
       'pink',
-      'dark-pink',
+      'pink-dark',
       'purple',
-      'dark-purple',
+      'purple-dark',
       'deep-purple',
-      'dark-deep-purple',
+      'deep-purple-dark',
       'red',
-      'dark-red',
+      'red-dark',
       'teal',
-      'dark-teal',
+      'teal-dark',
       'yellow',
-      'dark-yellow',
+      'yellow-dark',
       'admin1'
     ]
     const componentRef = ref(null),
-      applyAll = ref(false)
+      applyAll = ref(false),
+      store = useMarkdownStore(),
+      $q = useQuasar()
 
     const { setTheme, currentTheme, setElement } = useLaminate()
 
     watch(applyAll, val => {
       if (val) {
         setElement(document.body)
+        nextTick(() => {
+          $q.dark.set(currentTheme.value.indexOf('dark') > -1)
+        })
       }
       else {
         setElement(componentRef.value)
+        $q.dark.set('auto')
+      }
+    })
+
+    watch (currentTheme, val => {
+      if (applyAll.value === true) {
+        nextTick(() => {
+          $q.dark.set(val.indexOf('dark') > -1)
+        })
+      }
+      else {
+        $q.dark.set('auto')
       }
     })
 
@@ -156,6 +176,7 @@ export default defineComponent({
 
     onUnmounted(() => {
       setElement(null)
+      $q.dark.set('auto')
     })
 
     return {
