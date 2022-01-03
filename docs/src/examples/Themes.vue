@@ -13,7 +13,7 @@
         <q-list dense class="q-my-sm">
           <q-item
             v-for="theme in themes"
-            :key="theme"
+            :key="'Theme:' +theme"
             clickable
             :active="theme === currentTheme"
             @click="setTheme(theme)"
@@ -91,6 +91,7 @@ import 'vue-laminate/src/quasar-shim.scss'
 import 'vue-laminate/src/themes/all-themes.scss'
 import 'vue-laminate/src/aside.scss'
 import 'vue-laminate/src/header-footer.scss'
+// import 'vue-laminate/src/section.scss'
 
 const themes = [
   'default',
