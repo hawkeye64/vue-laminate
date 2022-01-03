@@ -18,6 +18,9 @@
   },
   "bugs": "",
   "homepage": "",
+  "dependencies": {
+    "@vueuse/core": "^7.5.1"
+  },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-json": "^4.1.0",
@@ -26,7 +29,7 @@
     "autoprefixer": "^10.4.1",
     "chalk": "^4.1.0",
     "cssnano": "^5.0.14",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^10.0.0",
     "glob": "7.2.0",
     "open": "^8.4.0",
     "postcss": "^8.4.5",
@@ -47,8 +50,5 @@
     "last 4 ChromeAndroid versions",
     "last 4 FirefoxAndroid versions",
     "last 4 iOS versions"
-  ],
-  "dependencies": {
-    "@vueuse/core": "^7.5.1"
-  }
+  ]
 }
