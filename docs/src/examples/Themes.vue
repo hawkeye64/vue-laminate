@@ -145,22 +145,22 @@ export default defineComponent({
       applyAll = ref(false),
       $q = useQuasar()
 
-    const { setTheme, currentTheme, setElement } = useLaminate()
+    const { laminate } = useLaminate({ useCache: true, cacheName: 'themes-theme' })
 
     watch(applyAll, val => {
       if (val) {
-        setElement(document.body)
+        laminate.setElement(document.body)
         nextTick(() => {
-          $q.dark.set(currentTheme.value.indexOf('dark') > -1)
+          $q.dark.set(laminate.themeName.value.indexOf('dark') > -1)
         })
       }
       else {
-        setElement(componentRef.value)
+        laminate.setElement(componentRef.value)
         $q.dark.set('auto')
       }
     })
 
-    watch (currentTheme, val => {
+    watch (laminate.themeName, val => {
       if (applyAll.value === true) {
         nextTick(() => {
           $q.dark.set(val.indexOf('dark') > -1)
@@ -172,11 +172,12 @@ export default defineComponent({
     })
 
     onMounted(() => {
-      setElement(componentRef.value)
+      laminate.onMounted()
+      laminate.setElement(componentRef.value)
     })
 
     onUnmounted(() => {
-      setElement(null)
+      laminate.setElement(null)
       $q.dark.set('auto')
     })
 
@@ -184,8 +185,8 @@ export default defineComponent({
       componentRef,
       applyAll,
       themes,
-      setTheme,
-      currentTheme
+      setTheme: laminate.setTheme,
+      currentTheme: laminate.themeName
     }
 
   }

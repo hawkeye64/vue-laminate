@@ -172,22 +172,22 @@ export default {
       applyAll = ref(false),
       $q = useQuasar()
 
-    const { setTheme, currentTheme, setElement } = useLaminate(true, 'layout-theme')
+    const { laminate } = useLaminate({ useCache: true, cacheName: 'layout-theme' })
 
     watch(applyAll, val => {
       if (val) {
-        setElement(document.body)
+        laminate.setElement(document.body)
         nextTick(() => {
-          $q.dark.set(currentTheme.value.indexOf('dark') > -1)
+          $q.dark.set(laminate.themeName.value.indexOf('dark') > -1)
         })
       }
       else {
-        setElement(componentRef.value.$el || componentRef.value)
+        laminate.setElement(componentRef.value.$el || componentRef.value)
         $q.dark.set('auto')
       }
     })
 
-    watch (currentTheme, val => {
+    watch (laminate.themeName, val => {
       if (applyAll.value === true) {
         nextTick(() => {
           $q.dark.set(val.indexOf('dark') > -1)
@@ -199,11 +199,12 @@ export default {
     })
 
     onMounted(() => {
-      setElement(componentRef.value.$el || componentRef.value)
+      laminate.onMounted()
+      laminate.setElement(componentRef.value.$el || componentRef.value)
     })
 
     onUnmounted(() => {
-      setElement(null)
+      laminate.setElement(null)
       $q.dark.set('auto')
     })
 
@@ -211,8 +212,8 @@ export default {
       componentRef,
       applyAll,
       themes,
-      setTheme,
-      currentTheme,
+      setTheme: laminate.setTheme,
+      currentTheme: laminate.themeName,
       drawer: ref(false),
       menuList
     }
