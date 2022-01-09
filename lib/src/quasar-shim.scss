@@ -6,6 +6,11 @@
   --q-primary: var(--brand1);
   --q-secondary: var(--brand2);
 
+  body.body--dark, .q-dark {
+    background: var(--surface1) !important;
+    color: var(--text1) !important;
+  }
+
   .q-layout {
     background: var(--surface1) !important;
     color: var(--text1) !important;
@@ -14,6 +19,10 @@
   .q-page {
     background: transparent;
     color: var(--text1);
+  }
+
+  .q-card {
+    background: var(--surface1)
   }
 
   .q-menu {
@@ -74,7 +83,7 @@
   }
 
   .q-item.q-router-link--active, .q-item--active {
-    background: var(--surface2);
+    background: var(--surface3);
     color: var(--text2);
   }
 }
