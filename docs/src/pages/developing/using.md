@@ -167,17 +167,15 @@ Don't forget, you can make your own. This will be explained in the next section.
 ### Theme Concepts
 
 <example-viewer
-title=""
-file="Themes"
-codepen-title="vue-laminate"
-class="bg-surface2"
+  title=""
+  file="Themes"
+  codepen-title="vue-laminate"
 />
 
 ### Layout
 
 <example-viewer
-title=""
-file="Layout"
-codepen-title="vue-laminate"
-class="bg-surface2"
+  title=""
+  file="Layout"
+  codepen-title="vue-laminate"
 />
