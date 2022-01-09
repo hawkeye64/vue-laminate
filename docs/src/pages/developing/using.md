@@ -42,7 +42,7 @@ The Laminated class contains the following:
 | Name | Type | Description | Example |
 | --- | --- | --- | --- |
 | themeName | ref | Contains the current theme. | `laminate.themeName.value` |
-| el | ref | Contains the currently bound element. Can be `null`. | |
+| el | ref | Contains the currently bound element. Can be `null`. | `laminate.el` |
 | onMounted | function | Call this in the Vue life-cycle hooks `onMounted` or `onBeforeMount`. It can take an optional initial element. | `laminate.onMounted(document.body)` |
 | setTheme | function | Used to change the theme color. | `laminate.setTheme('red')` |
 | setElement | function | For setting a specific element to bind with. If you want to bind to the complete page, the use `document.firstElementChild`, `document.body`, or otherwise use a `ref` value for the specific component to bind. Call `setElement(null)` to turn off theming. | |
@@ -100,7 +100,7 @@ import 'vue-laminate/dist/header-footer.css'
 The reason some CSS definitions are in their own file is so that if you don't care for what we have done, you can certainly make your own. We don't try to tie you down to our own designs. `vue-laminate` was made to be extensible as much as possible.
 :::
 
-All color themes that comes with Vue Laminate is available individually, in the `themes` folder. To use the `blue` theme, you can:
+All color themes that comes with Vue Laminate are available individually, in the `themes` folder. To use the `red` theme, you can:
 
 ```js
 import 'vue-laminate/dist/index.css '
@@ -119,7 +119,7 @@ onMounted(() => {
 })
 ```
 
-If you call `setTheme` with a theme file that is not been imported, then it will not work.
+If you call `setTheme` with a theme file that is not been imported, then it will not work as the css will not be available.
 
 ## Auto Dark Mode
 
@@ -164,7 +164,7 @@ Don't forget, you can make your own. This will be explained in the next section.
 
 ## Examples
 
-### Themes
+### Theme Concepts
 
 <example-viewer
 title=""
