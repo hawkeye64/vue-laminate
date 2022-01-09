@@ -35,17 +35,17 @@
             </h1>
           </div>
           <div class="surface-samples text-text1">
-            <q-card class="bg-surface1 facade-shadow">1</q-card>
-            <q-card class="bg-surface2 facade-shadow">2</q-card>
-            <q-card class="bg-surface3 facade-shadow">3</q-card>
-            <q-card class="bg-surface4 facade-shadow">4</q-card>
+            <q-card class="bg-surface1 laminate-shadow">1</q-card>
+            <q-card class="bg-surface2 laminate-shadow">2</q-card>
+            <q-card class="bg-surface3 laminate-shadow">3</q-card>
+            <q-card class="bg-surface4 laminate-shadow">4</q-card>
           </div>
         </section>
 
         <section>
           <div class="text-samples row justify-evenly items-center">
             <h1 class="text-brand1 q-ma-none">
-              <span class="swatch bg-brand1 facade-shadow"></span>
+              <span class="swatch bg-brand1 laminate-shadow"></span>
               Brand 1
             </h1>
             <p class="text-brand1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -53,7 +53,7 @@
 
           <div class="text-samples row justify-evenly items-center">
             <h1 class="text-brand2 q-ma-none">
-              <span class="swatch bg-brand2 facade-shadow"></span>
+              <span class="swatch bg-brand2 laminate-shadow"></span>
               Brand 2
             </h1>
             <p class="text-brand2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -61,7 +61,7 @@
 
           <div class="text-samples row justify-evenly items-center">
             <h1 class="text-text1 q-ma-none">
-              <span class="swatch bg-text1 facade-shadow"></span>
+              <span class="swatch bg-text1 laminate-shadow"></span>
               Text Color 1
             </h1>
             <p class="text-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -69,7 +69,7 @@
 
           <div class="text-samples row justify-evenly items-center">
             <h1 class="text-text2 q-ma-none">
-              <span class="swatch bg-text2 facade-shadow"></span>
+              <span class="swatch bg-text2 laminate-shadow"></span>
               Text Color 2
             </h1>
             <p class="text-text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
