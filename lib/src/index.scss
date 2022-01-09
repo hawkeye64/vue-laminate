@@ -32,7 +32,7 @@
 }
 
 .vue-laminate {
-  html {
+  html, body {
     background: var(--surface1) !important;
     color: var(--text1) !important;
     accent-color: var(--brand1);
