@@ -2,6 +2,13 @@
   "name": "vue-laminate",
   "version": "0.0.1-alpha.1",
   "author": "Jeff Galbraith <galbrait64@gmail.com>",
+  "contributors": [
+    {
+      "name": "Christian Behon",
+      "email": "christian.behon@knusperleicht.at",
+      "url": "https://knusperleicht.at"
+    }
+  ],
   "description": "Vue-Laminate: Give your Vue apps themes",
   "license": "MIT",
   "module": "dist/index.esm.js",
@@ -14,9 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/hawkeye64/vue-laminate"
   },
-  "bugs": "",
+  "funding": "https://github.com/sponsors/hawkeye64",
+  "bugs": "https://github.com/hawkeye64/vue-laminate/issues",
   "homepage": "",
   "dependencies": {
     "@vueuse/core": "^7.5.1"
