@@ -6,8 +6,8 @@
   --q-primary: var(--brand1);
   --q-secondary: var(--brand2);
 
-  body.body--dark, .q-dark {
-    background: var(--surface1) !important;
+  body.body--dark {
+    background: var(--surface2) !important;
     color: var(--text1) !important;
   }
 
@@ -22,8 +22,15 @@
   }
 
   .q-card {
-    background: var(--surface1)
+    background: var(--surface1);
   }
+
+  // .q-card--bordered {
+  //   border-top-color: rgba(var(--surface1), 0.12);
+  //   border-left-color: rgba(var(--surface1), 0.12);
+  //   border-right-color: rgba(var(--surface1), 0.12);
+  //   border-bottom-color: rgba(var(--surface1), 0.12);
+  // }
 
   .q-menu {
     background: var(--surface1);
@@ -79,7 +86,8 @@
   }
 
   .q-btn {
-    color: var(--text1);
+    color: var(--text1) !important;
+    background: var(--surface3);
   }
 
   .q-item.q-router-link--active, .q-item--active {
