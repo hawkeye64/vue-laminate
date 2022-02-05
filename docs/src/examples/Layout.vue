@@ -2,26 +2,13 @@
   <div class="q-pa-md">
     <div class="full-width row justify-center items-center q-pa-md q-gutter-sm">
 
-      <q-btn-dropdown
-        no-caps
-        outline
-        :label="'Themes (' + currentTheme + ')'"
-        auto-close
-        align="right"
+      <q-select
+        v-model="selectedTheme"
+        :options="themes"
+        outlined
+        dense
         style="min-width: 250px;"
-      >
-        <q-list dense class="q-my-sm">
-          <q-item
-            v-for="theme in themes"
-            :key="'Layout:' + theme"
-            clickable
-            :active="theme === currentTheme"
-            @click="setTheme(theme)"
-          >
-            {{ theme }}
-          </q-item>
-        </q-list>
-      </q-btn-dropdown>
+      />
 
       <q-checkbox v-model="applyAll" label="Apply to Whole Page" />
     </div>
@@ -170,9 +157,14 @@ export default {
   setup () {
     const componentRef = ref(null),
       applyAll = ref(false),
-      $q = useQuasar()
+      $q = useQuasar(),
+      selectedTheme = ref('default')
 
     const { laminate } = useLaminate({ useCache: true, cacheName: 'layout-theme' })
+
+    watch(selectedTheme, val => {
+      laminate.setTheme(val)
+    })
 
     watch(applyAll, val => {
       if (val) {
@@ -212,8 +204,7 @@ export default {
       componentRef,
       applyAll,
       themes,
-      setTheme: laminate.setTheme,
-      currentTheme: laminate.themeName,
+      selectedTheme,
       drawer: ref(false),
       menuList
     }
